@@ -27,4 +27,5 @@ def stylish(filepath1, filepath2):
         elif (key not in keys1 and key in keys2):
             result += '\n  + {}: {}'.format(key, file2[key])
 
+    print('{' + result + '\n}')
     return '{' + result + '\n}'

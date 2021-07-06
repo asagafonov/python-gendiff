@@ -3,4 +3,4 @@ from gendiff.diff_generators import stylish
 
 
 def main():
-    stylish('../../__fixtures__/before.json', '../../__fixtures__/after.json')
+    stylish.stylish('__fixtures__/before.json', '__fixtures__/after.json')
