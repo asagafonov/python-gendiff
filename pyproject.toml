@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Diff generator utility"
+authors = ["asagafonov <a.s.agafonov@yandex.ru>"]
+repository = "https://github.com/asagafonov/python-project-lvl2"
+packages = [
+  { include = "gendiff" },
+]
+classifiers = [
+    "Topic :: Software Development :: Utilities",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.launch_gendiff:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
