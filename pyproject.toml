@@ -14,7 +14,6 @@ classifiers = [
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.launch_gendiff:main"
-stylish = "gendiff.scripts.launch_stylish:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
