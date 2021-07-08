@@ -1,13 +1,9 @@
-import json
-
-
-def open_json(filepath):
-    return json.load(open(filepath))
+from gendiff.parser import parse
 
 
 def stylish(filepath1, filepath2):
-    file1 = open_json(filepath1)
-    file2 = open_json(filepath2)
+    file1 = parse(filepath1)
+    file2 = parse(filepath2)
 
     keys1 = list(file1.keys())
     keys2 = list(file2.keys())
