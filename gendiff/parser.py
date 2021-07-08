@@ -1,11 +1,9 @@
 import json
 import yaml
 import ini
-import pathlib
 
 
-def parse(filepath):
-    ext = pathlib.Path(filepath).suffix
+def parse(filepath, ext):
     if ext == '.json':
         return json.load(open(filepath))
     elif ext == '.yml' or ext == '.yaml':
