@@ -15,9 +15,6 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-if 'stylish' in args.format:
-    print(gendiff(args.first_file, args.second_file, 'stylish'))
-if 'plain' in args.format:
-    print(gendiff(args.first_file, args.second_file, 'plain'))
-if 'json' in args.format:
-    print(gendiff(args.first_file, args.second_file, 'json'))
+
+def launch():
+    print(gendiff.generate(args.first_file, args.second_file, args.format))

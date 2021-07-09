@@ -23,7 +23,7 @@ def prepare_diff(obj1, obj2):
                 'status': 'deleted',
                 'value': obj1[key]
             })
-        elif type(obj1[key]) == 'object' and type(obj2[key]) == 'object':
+        elif isinstance(obj1[key], dict) and isinstance(obj2[key], dict):
             result.append({
                 'name': key,
                 'status': 'unknown',
@@ -46,7 +46,7 @@ def prepare_diff(obj1, obj2):
     return result
 
 
-def gendiff(filepath1, filepath2, format):
+def generate(filepath1, filepath2, format):
     full_path1 = pathlib.Path(filepath1).resolve()
     full_path2 = pathlib.Path(filepath2).resolve()
 
@@ -60,6 +60,6 @@ def gendiff(filepath1, filepath2, format):
     file2 = parse(full_path2, file2_ext)
 
     diff = prepare_diff(file1, file2)
-    output = format_diff(diff)
+    output = format_diff(diff, format)
 
     return output

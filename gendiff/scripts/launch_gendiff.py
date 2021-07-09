@@ -3,4 +3,4 @@ from gendiff import cli
 
 
 def main():
-    cli()
+    cli.launch()
