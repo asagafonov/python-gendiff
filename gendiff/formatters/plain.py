@@ -9,12 +9,13 @@ def flatten(collection):
 
 
 def stringify(val):
+    if val is None:
+        return 'null'
     if isinstance(val, dict):
         return '[complex value]'
-    elif type(val) == 'boolean':
-        return val
-    else:
-        return '\'{}\''.format(val)
+    if isinstance(val, bool):
+        return str(val).lower()
+    return '\'{}\''.format(val)
 
 
 def add_plain_formatting(diff):
