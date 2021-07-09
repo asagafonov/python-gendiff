@@ -12,3 +12,6 @@ package-install:
 
 lint:
 	poetry run flake8 gendiff
+
+plain:
+	poetry run gendiff -f plain ./__tests__/fixtures/before.json ./__tests__/fixtures/after.json
