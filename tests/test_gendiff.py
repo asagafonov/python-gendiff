@@ -1,5 +1,5 @@
 from pathlib import Path
-from gendiff.generate_diff import generate_diff
+from gendiff import generate_diff
 
 
 stylish_path = './tests/fixtures/expectedStylish.txt'
