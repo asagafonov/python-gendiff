@@ -5,6 +5,8 @@ def stringify_plain(val):
         return '[complex value]'
     if isinstance(val, bool):
         return str(val).lower()
+    if isinstance(val, int):
+        return str(val)
     return '\'{}\''.format(val)
 
 

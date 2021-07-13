@@ -24,7 +24,7 @@ def add_plain_formatting(diff): # noqa C901
                 pass
             elif item['status'] == 'modified':
                 result.append(
-                    'Property \'{}\' was updated from {} to {}'.format(
+                    'Property \'{}\' was updated. From {} to {}'.format(
                         new_path[1:],
                         stringify(item['old_value']),
                         stringify(item['new_value'])
