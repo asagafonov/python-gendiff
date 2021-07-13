@@ -1,14 +1,5 @@
 from gendiff.utils.flatten import flatten
-
-
-def stringify(val):
-    if val is None:
-        return 'null'
-    if isinstance(val, dict):
-        return '[complex value]'
-    if isinstance(val, bool):
-        return str(val).lower()
-    return '\'{}\''.format(val)
+from gendiff.utils.stringify import stringify_plain as stringify
 
 
 def add_plain_formatting(diff): # noqa C901

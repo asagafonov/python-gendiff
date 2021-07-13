@@ -1,9 +1,10 @@
 from gendiff.utils.flatten import flatten
+from gendiff.utils.stringify import stringify_stylish as stringify
 
 
 def expand(val):
     if not isinstance(val, dict):
-        return val
+        return stringify(val)
     keys = list(val.keys())
     result = []
     for key in keys:
