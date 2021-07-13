@@ -1,5 +1,5 @@
 from pathlib import Path
-from gendiff.gendiff import generate_diff
+from gendiff.generate_diff import generate
 
 
 stylish_path = './tests/fixtures/expectedStylish.txt'
@@ -16,15 +16,15 @@ def test_generate_from_json():
     path1 = './tests/fixtures/before.json'
     path2 = './tests/fixtures/after.json'
 
-    assert generate_diff(path1, path2, 'stylish') == expectedStylish
-    assert generate_diff(path1, path2, 'plain') == expectedPlain
-    assert generate_diff(path1, path2, 'json') == expectedJSON
+    assert generate(path1, path2, 'stylish') == expectedStylish
+    assert generate(path1, path2, 'plain') == expectedPlain
+    assert generate(path1, path2, 'json') == expectedJSON
 
 
 def test_generate_from_yaml():
     path1 = './tests/fixtures/before.yml'
     path2 = './tests/fixtures/after.yml'
 
-    assert generate_diff(path1, path2, 'stylish') == expectedStylish
-    assert generate_diff(path1, path2, 'plain') == expectedPlain
-    assert generate_diff(path1, path2, 'json') == expectedJSON
+    assert generate(path1, path2, 'stylish') == expectedStylish
+    assert generate(path1, path2, 'plain') == expectedPlain
+    assert generate(path1, path2, 'json') == expectedJSON
