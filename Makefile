@@ -13,5 +13,14 @@ package-install:
 lint:
 	poetry run flake8 gendiff
 
+test:
+	poetry run pytest
+
+stylish:
+	poetry run gendiff ./tests/fixtures/before.json ./tests/fixtures/after.json
+
 plain:
-	poetry run gendiff -f plain ./__tests__/fixtures/before.json ./__tests__/fixtures/after.json
+	poetry run gendiff -f plain ./tests/fixtures/before.json ./tests/fixtures/after.json
+
+json:
+	poetry run gendiff -f json ./tests/fixtures/before.json ./tests/fixtures/after.json
