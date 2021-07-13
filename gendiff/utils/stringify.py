@@ -15,4 +15,4 @@ def stringify_stylish(val):
         pass
     if isinstance(val, bool):
         return str(val).lower()
-    return '\'{}\''.format(val)
+    return '{}'.format(val)
