@@ -16,10 +16,11 @@ classifiers = [
 gendiff = "gendiff.scripts.launch_gendiff:main"
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.8,<4"
 pathlib = "^1.0.1"
 PyYAML = "^5.4.1"
 pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
