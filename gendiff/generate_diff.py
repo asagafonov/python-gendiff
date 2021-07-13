@@ -46,7 +46,7 @@ def prepare_diff(obj1, obj2):
     return result
 
 
-def generate_diff(filepath1, filepath2, format):
+def generate_diff(filepath1, filepath2, format='stylish'):
     full_path1 = pathlib.Path(filepath1).resolve()
     full_path2 = pathlib.Path(filepath2).resolve()
 
