@@ -17,4 +17,4 @@ args = parser.parse_args()
 
 
 def launch():
-    print(gendiff.generate(args.first_file, args.second_file, args.format))
+    print(gendiff.generate_diff(args.first_file, args.second_file, args.format))
